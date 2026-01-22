@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defensa Tesis - Dra. Roxana Torres Lazo</title>
+
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/white.min.css" id="theme">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* MEDICAL CLEAN THEME - LAPTOP OPTIMIZED */
+        :root {
+            --medical-blue: #005a87;
+            --medical-light: #48a9c5;
+            --medical-gray: #f0f4f8;
+            --text-dark: #2c3e50;
+            --alert-red: #e74c3c;
+            --success-green: #27ae60;
+        }
+
+        .reveal { color: var(--text-dark); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+        /* Títulos más compactos para pantallas de laptop */
+        .reveal h1 { font-size: 1.8em; color: var(--medical-blue); font-weight: 700; text-transform: none; margin-bottom: 10px; }
+        .reveal h2 { font-size: 1.5em; color: var(--medical-blue); }
+        .reveal h3 { font-size: 1.3em; color: var(--medical-blue); text-transform: none; font-weight: 700; border-bottom: 2px solid var(--medical-gray); padding-bottom: 10px; margin-bottom: 20px; }
+        .reveal h4 { font-size: 1.0em; font-weight: bold; }
+        .reveal h5 { font-size: 0.9em; margin: 5px 0; }
+
+        /* Contenido General */
+        .reveal p, .reveal li { font-size: 0.7em; line-height: 1.4; }
+        .text-small { font-size: 0.6em !important; }
+        .text-tiny { font-size: 0.5em !important; color: #7f8c8d; }
+
+        /* Cards & Layout */
+        .med-card {
+            background: white;
+            border-left: 4px solid var(--medical-blue);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            padding: 15px; /* Padding reducido */
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .flex-container { display: flex; justify-content: space-between; gap: 15px; align-items: flex-start; }
+        .col-50 { flex: 1; }
+        .col-33 { flex: 0.33; }
+
+        /* Estadísticas */
+        .big-stat { font-size: 2.2em; font-weight: bold; color: var(--medical-blue); line-height: 1; display: block; }
+        .stat-label { font-size: 0.5em; text-transform: uppercase; letter-spacing: 1px; color: #7f8c8d; }
+
+        /* Tablas Compactas */
+        .reveal table { font-size: 0.55em; border-collapse: collapse; width: 100%; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0; }
+        .reveal table th { background-color: var(--medical-blue); color: white; padding: 8px; }
+        .reveal table td { border-bottom: 1px solid #ddd; padding: 6px; }
+        .reveal table tr:nth-child(even) { background-color: var(--medical-gray); }
+
+        /* Barras de Progreso */
+        .bar-container { background-color: #eee; width: 100%; height: 15px; border-radius: 8px; margin-top: 2px; margin-bottom: 10px; }
+        .bar-fill { height: 100%; border-radius: 8px; text-align: right; padding-right: 5px; line-height: 15px; color: white; font-size: 10px; font-weight: bold; }
+
+        /* Gráfico de Barras Verticales (Slide Ocupación) */
+        .chart-container {
+            display: flex;
+            align-items: flex-end;
+            height: 250px; /* Altura fija contenida */
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .v-bar { width: 80px; text-align: center; font-size: 0.6em; }
+        .v-bar-fill { width: 100%; border-radius: 5px 5px 0 0; display:flex; align-items:flex-end; justify-content:center; color:white; font-weight:bold; padding-bottom: 5px; transition: height 1s; }
+
+        /* Utilidades */
+        .text-center { text-align: center !important; }
+        .badge { display: inline-block; padding: 2px 6px; border-radius: 3px; color: white; font-weight: bold; font-size: 0.8em; }
+        .fragment.visible:not(.current-fragment) { opacity: 1; } /* Asegurar visibilidad */
+
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- DIAPOSITIVA 1: PORTADA -->
+            <section data-background-color="#ffffff">
+                <div style="text-align: center; margin-top: -20px;">
+                    <i class="fas fa-university fa-2x" style="color: var(--medical-blue); margin-bottom: 10px;"></i>
+                    <p class="text-tiny" style="text-transform: uppercase; letter-spacing: 2px;">Trabajo de Terminación de Residencia</p>
+                    <h1>Factores de Riesgo y Prevención de la Diabetes Mellitus Tipo 2</h1>
+                    <div style="background: var(--medical-blue); height: 3px; width: 100px; margin: 15px auto;"></div>
+
+                    <div style="font-size: 0.65em; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 80%; margin: 30px auto; text-align: left;">
+                        <div>
+                            <p><strong>Autora:</strong><br> Dra. Roxana Torres Lazo</p>
+                            <p><strong>Tutora:</strong><br> Dra. Leimys Enrique Gallo</p>
+                        </div>
+                        <div>
+                            <p><strong>Asesor:</strong><br> Yaumara Paz Martínez</p>
+                            <p><strong>Institución:</strong><br> FCM "Faustino Pérez Hernández"</p>
+                        </div>
+                    </div>
+                    <p class="text-tiny" style="margin-top: 20px;">Sancti Spíritus | 2025</p>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 2: PENSAMIENTO -->
+            <section>
+                <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <blockquote style="background: var(--medical-gray); border-left: 8px solid var(--medical-blue); padding: 30px; font-style: italic; font-size: 0.9em; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <i class="fas fa-quote-left" style="color: var(--medical-light); margin-bottom: 10px;"></i><br>
+                        "El médico será algo más que alguien que atiende a uno que se enferma y va al hospital, sino que tendrá un papel especial en la medicina preventiva, en fin, será un <span style="color:var(--medical-blue); font-weight:bold;">Guardián de la Salud</span>."
+                    </blockquote>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 3: CONTEXTO Y PROBLEMA -->
+            <section>
+                <h3>Situación Problémica</h3>
+                <div class="flex-container">
+                    <div class="col-50">
+                        <div class="med-card">
+                            <h4><i class="fas fa-globe-americas"></i> Panorama</h4>
+                            <ul class="text-small">
+                                <li><strong>Mundo:</strong> 537 millones de casos. Tendencia ascendente.</li>
+                                <li><strong>Cuba:</strong> DM entre las 10 primeras causas de muerte.</li>
+                                <li><strong>Local (Cabaiguán):</strong> Tasas superiores a la media provincial.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <div class="med-card" style="border-left-color: var(--alert-red);">
+                            <h4 style="color: var(--alert-red);"><i class="fas fa-exclamation-circle"></i> Problema Local (CMF 28)</h4>
+                            <p class="text-small">A pesar del tratamiento farmacológico, persisten:</p>
+                            <ul class="text-small" style="margin-top: 5px;">
+                                <li>Descompensaciones frecuentes.</li>
+                                <li>Escasa adherencia a dieta/ejercicio.</li>
+                                <li>Brecha entre conocimiento teórico y práctica diaria.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 4: OBJETIVOS -->
+            <section>
+                <h3>Objetivos de la Investigación</h3>
+                <div class="med-card">
+                    <h4><i class="fas fa-crosshairs"></i> Objetivo General</h4>
+                    <p class="text-small">Caracterizar el comportamiento de los factores de riesgo de la DM2 en pacientes del CMF #28 del Policlínico No. 2 (Abril 2023 - Octubre 2025).</p>
+                </div>
+
+                <div style="background: var(--medical-gray); padding: 15px; border-radius: 5px;">
+                    <h5 style="color: var(--medical-blue);">Objetivos Específicos:</h5>
+                    <ol class="text-small" style="margin-left: 20px;">
+                        <li>Identificar factores sociodemográficos y clínicos.</li>
+                        <li>Diagnosticar el <strong>estilo de vida</strong> actual (Instrumento IMEVID).</li>
+                        <li>Diseñar una estrategia educativa integral ("Conviviendo con la Diabetes").</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 5: DISEÑO METODOLÓGICO -->
+            <section>
+                <h3>Diseño Metodológico</h3>
+                <!-- Uso de Flexbox horizontal para ahorrar espacio vertical -->
+                <div class="flex-container" style="align-items: stretch;">
+                    <div class="col-33 med-card text-center">
+                        <i class="fas fa-project-diagram fa-2x" style="color: var(--medical-light);"></i>
+                        <h5>Tipo de Estudio</h5>
+                        <p class="text-small">Observacional<br>Descriptivo<br>Transversal</p>
+                    </div>
+                    <div class="col-33 med-card text-center">
+                        <i class="fas fa-users fa-2x" style="color: var(--medical-light);"></i>
+                        <h5>Población</h5>
+                        <p class="big-stat">78</p>
+                        <p class="text-small">Pacientes Diabéticos</p>
+                    </div>
+                    <div class="col-33 med-card text-center" style="border-left-color: var(--success-green);">
+                        <i class="fas fa-check-circle fa-2x" style="color: var(--success-green);"></i>
+                        <h5>Muestra Final</h5>
+                        <p class="big-stat" style="color: var(--success-green);">75</p>
+                        <p class="text-small">Criterios de inclusión cumplidos</p>
+                    </div>
+                </div>
+                <p class="text-tiny text-center mt-2"><strong>Variables Clave:</strong> Edad, Sexo, Escolaridad, Comorbilidades, Tratamiento, Estilo de Vida.</p>
+            </section>
+
+            <!-- DIAPOSITIVA 6: RESULTADOS - EDAD Y SEXO -->
+            <section>
+                <h3>Perfil: Edad y Sexo</h3>
+                <div class="flex-container">
+                    <div class="col-50">
+                        <div class="med-card text-center">
+                            <i class="fas fa-venus fa-3x" style="color: #e91e63;"></i>
+                            <h4 style="margin-top: 10px;">86.5%</h4>
+                            <p class="text-small">Sexo Femenino</p>
+                        </div>
+                        <p class="text-small text-justify">La mayor incidencia se reporta en mujeres, coincidiendo con la literatura internacional (sedentarismo, factores hormonales).</p>
+                    </div>
+                    <div class="col-50">
+                        <table>
+                            <thead><tr><th>Grupo Etario</th><th>Total</th><th>%</th></tr></thead>
+                            <tbody>
+                                <tr><td>19-39 años</td><td>4</td><td>5.6%</td></tr>
+                                <tr><td>40-59 años</td><td>27</td><td>36.0%</td></tr>
+                                <tr style="background-color: #d1ecf1; font-weight: bold;"><td>60-69 años</td><td>22</td><td>29.4%</td></tr>
+                                <tr style="background-color: #d1ecf1; font-weight: bold;"><td>≥ 70 años</td><td>22</td><td>29.4%</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="med-card text-center" style="padding: 5px; margin-top: 10px; background: var(--medical-gray); border: none;">
+                            <p class="text-small"><strong>Dato Clave:</strong> El 58% de la muestra tiene más de 60 años.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 7: NIVEL ESCOLAR -->
+            <section>
+                <h3>Nivel Escolar (Factor Sorpresa)</h3>
+                <div class="flex-container">
+                    <div class="col-50">
+                        <p class="text-small">Contrario a lo esperado, la muestra posee un nivel educativo alto.</p>
+                        <ul class="text-small">
+                            <li><strong>Universitario:</strong> 53.7%</li>
+                            <li><strong>Preuniversitario:</strong> 22.3%</li>
+                        </ul>
+                        <div class="med-card mt-2" style="border-left-color: #f39c12;">
+                            <p class="text-tiny"><i class="fas fa-lightbulb" style="color: #f39c12;"></i> <strong>Análisis:</strong> Un alto nivel educativo no se traduce automáticamente en alfabetización en salud o mejores hábitos.</p>
+                        </div>
+                    </div>
+                    <div class="col-50 text-center">
+                        <i class="fas fa-user-graduate fa-4x" style="color: var(--medical-blue); opacity: 0.2;"></i>
+                        <div style="position: relative; top: -50px;">
+                            <span class="big-stat">53.7%</span>
+                            <span class="text-small">Nivel Universitario</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 8: OCUPACIÓN -->
+            <section>
+                <h3>Distribución Ocupacional</h3>
+                <p class="text-small text-center">El estatus laboral influye directamente en el sedentarismo.</p>
+
+                <div class="chart-container">
+                    <div class="v-bar">
+                        <div class="v-bar-fill" style="height: 65%; background: var(--medical-light);">26.8%</div>
+                        <p>Trabajadores</p>
+                    </div>
+                    <div class="v-bar">
+                        <div class="v-bar-fill" style="height: 70%; background: var(--medical-light);">29.8%</div>
+                        <p>Amas de Casa</p>
+                    </div>
+                    <div class="v-bar">
+                        <div class="v-bar-fill" style="height: 100%; background: var(--medical-blue);">41.7%</div>
+                        <p><strong>Jubilados</strong></p>
+                    </div>
+                </div>
+                <p class="text-tiny text-center mt-2">Fuente: Tabla 2 de la Tesis</p>
+            </section>
+
+            <!-- DIAPOSITIVA 9: COMORBILIDADES -->
+            <section>
+                <h3>Comorbilidad Asociada</h3>
+                <div class="flex-container">
+                    <div class="col-50">
+                        <p class="text-small">Prevalencia de enfermedades asociadas:</p>
+
+                        <div style="margin-bottom: 8px;">
+                            <div class="flex-container" style="margin-bottom: 2px;">
+                                <span class="text-tiny"><strong>HTA</strong></span>
+                                <span class="text-tiny">53.7%</span>
+                            </div>
+                            <div class="bar-container"><div class="bar-fill" style="width: 53.7%; background: #e74c3c;"></div></div>
+                        </div>
+
+                        <div style="margin-bottom: 8px;">
+                            <div class="flex-container" style="margin-bottom: 2px;">
+                                <span class="text-tiny"><strong>Dislipidemia</strong></span>
+                                <span class="text-tiny">46.2%</span>
+                            </div>
+                            <div class="bar-container"><div class="bar-fill" style="width: 46.2%; background: #f39c12;"></div></div>
+                        </div>
+
+                        <div style="margin-bottom: 8px;">
+                            <div class="flex-container" style="margin-bottom: 2px;">
+                                <span class="text-tiny">EPOC</span>
+                                <span class="text-tiny">16.4%</span>
+                            </div>
+                            <div class="bar-container"><div class="bar-fill" style="width: 16.4%; background: #95a5a6;"></div></div>
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <div class="med-card text-center">
+                            <i class="fas fa-heartbeat fa-3x" style="color: #e74c3c;"></i>
+                            <h5 style="margin-top: 10px;">Riesgo Cardiovascular</h5>
+                            <p class="text-small">La coexistencia de DM + HTA + Dislipidemia aumenta exponencialmente el riesgo de eventos macrovasculares.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 10: TRATAMIENTO -->
+            <section>
+                <h3>Tratamiento: La Gran Paradoja</h3>
+                <div class="med-card" style="border-left: 5px solid #e74c3c; padding: 10px;">
+                    <p class="text-small"><strong>Hallazgo Crítico:</strong> Alta dependencia farmacológica vs. nula intervención en estilo de vida.</p>
+                </div>
+
+                <div class="flex-container mt-2">
+                    <div class="col-33 text-center">
+                        <div style="border: 2px solid var(--success-green); border-radius: 50%; width: 100px; height: 100px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                            <span class="big-stat" style="color: var(--success-green); font-size: 1.5em;">85%</span>
+                        </div>
+                        <p class="text-small">Uso de Fármacos Orales</p>
+                    </div>
+                    <div class="col-33 text-center">
+                        <div style="border: 2px solid #f39c12; border-radius: 50%; width: 100px; height: 100px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                            <span class="big-stat" style="color: #f39c12; font-size: 1.5em;">7.4%</span>
+                        </div>
+                        <p class="text-small">Cumple Dieta</p>
+                    </div>
+                    <div class="col-33 text-center">
+                        <div style="border: 2px solid #e74c3c; border-radius: 50%; width: 100px; height: 100px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                            <span class="big-stat" style="color: #e74c3c; font-size: 1.5em;">0%</span>
+                        </div>
+                        <p class="text-small"><strong>Ejercicio Físico</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 11: DAÑO RENAL -->
+            <section>
+                <h3>Evolución y Daño Renal (Microalbuminuria)</h3>
+                <p class="text-small">La duración de la enfermedad es directamente proporcional al daño orgánico.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Años de Evolución</th>
+                            <th class="text-center">Total Pacientes</th>
+                            <th class="text-center">Microalbuminuria (+)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Menos de 10 años</td>
+                            <td class="text-center">15</td>
+                            <td class="text-center" style="color: var(--success-green);">33.3%</td>
+                        </tr>
+                        <tr style="background: #ffe6e6;">
+                            <td><strong>Más de 10 años</strong></td>
+                            <td class="text-center">52</td>
+                            <td class="text-center" style="color: var(--alert-red); font-weight:bold;">78.8%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 20px; font-size: 0.6em; color: #7f8c8d;">
+                    <i class="fas fa-info-circle"></i> El 77.6% de la muestra estudiada tiene más de 10 años de evolución con la enfermedad.
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 12: ESTILO DE VIDA (IMEVID) -->
+            <section>
+                <h3>Evaluación IMEVID</h3>
+                <p class="text-small">Instrumento para Medir el Estilo de Vida en Diabéticos.</p>
+
+                <div class="flex-container">
+                    <div class="col-50">
+                        <div class="med-card text-center" style="padding: 20px;">
+                            <h1 style="color: #e74c3c; font-size: 3em; margin: 0;">96.9%</h1>
+                            <p class="text-small" style="text-transform: uppercase;">Estilo de vida Inadecuado</p>
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <table style="font-size: 0.6em;">
+                            <tr>
+                                <td><span class="badge" style="background: var(--success-green);">Muy Saludable</span></td>
+                                <td class="text-center">0%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge" style="background: var(--medical-light);">Saludable</span></td>
+                                <td class="text-center">2.9%</td>
+                            </tr>
+                            <tr style="background: #fff3cd;">
+                                <td><span class="badge" style="background: #f39c12;">Poco Saludable</span></td>
+                                <td class="text-center"><strong>74.6%</strong></td>
+                            </tr>
+                            <tr style="background: #f8d7da;">
+                                <td><span class="badge" style="background: #e74c3c;">No Saludable</span></td>
+                                <td class="text-center">22.3%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 13: ESTRATEGIA PROPUESTA -->
+            <section>
+                <h3>Estrategia: "Conviviendo con la Diabetes"</h3>
+                <p class="text-small">Intervención multimodal educativa para cerrar la brecha.</p>
+                <div class="flex-container">
+                    <div class="col-50 med-card">
+                        <h5><i class="fas fa-brain"></i> Cognitivo</h5>
+                        <ul class="text-small">
+                            <li>El ABC de la Diabetes.</li>
+                            <li>Manejo de estrés y emociones.</li>
+                            <li>Resolución de problemas diarios.</li>
+                        </ul>
+                    </div>
+                    <div class="col-50 med-card">
+                        <h5><i class="fas fa-hands-helping"></i> Práctico</h5>
+                        <ul class="text-small">
+                            <li><strong>Cocina Saludable:</strong> "Aprender haciendo".</li>
+                            <li><strong>Lectura de Etiquetas:</strong> Taller en supermercado.</li>
+                            <li><strong>Cuidado de Pies:</strong> Inspección diaria.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 14: CONCLUSIONES -->
+            <section>
+                <h3>Conclusiones</h3>
+                <div class="med-card" style="border-left: none; padding: 0;">
+                    <ol class="text-small" style="padding: 15px 30px; line-height: 1.6;">
+                        <li style="margin-bottom: 10px;"><strong>Perfil:</strong> Predominio de pacientes femeninas, >60 años, jubiladas y con alto nivel escolar, pero con baja educación diabetológica práctica.</li>
+                        <li style="margin-bottom: 10px;"><strong>Riesgo Clínico:</strong> Alta prevalencia de factores modificables (sedentarismo, obesidad) y comorbilidades (HTA, Dislipidemia). El daño renal aumenta drásticamente tras 10 años.</li>
+                        <li style="margin-bottom: 10px;"><strong>Estilo de Vida:</strong> Existe una desconexión crítica. Se cumple el tratamiento farmacológico (85%) pero se ignora la dieta y el ejercicio, resultando en un 96.9% de estilos de vida inadecuados (IMEVID).</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 15: RECOMENDACIONES -->
+            <section>
+                <h3>Recomendaciones</h3>
+                <div class="flex-container">
+                    <div class="col-33 text-center">
+                        <i class="fas fa-clipboard-check fa-4x" style="color: var(--medical-blue); opacity: 0.3;"></i>
+                    </div>
+                    <div class="col-50">
+                        <ul class="text-small" style="line-height: 2;">
+                            <li><i class="fas fa-check" style="color: var(--success-green);"></i> Implementar la estrategia "Conviviendo con la Diabetes".</li>
+                            <li><i class="fas fa-check" style="color: var(--success-green);"></i> Priorizar la detección temprana de complicaciones (Microalbuminuria).</li>
+                            <li><i class="fas fa-check" style="color: var(--success-green);"></i> Cambiar el enfoque de consulta: de prescribir fármacos a prescribir cambios de vida.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIAPOSITIVA 16: CIERRE -->
+            <section data-background-gradient="linear-gradient(to bottom, #005a87, #002a40)">
+                <h2 style="color: white; font-size: 2em;">Muchas Gracias</h2>
+                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; margin: 30px auto; max-width: 80%;">
+                    <p style="color: #ecf0f1; font-style: italic; font-size: 0.8em;">"La educación no es parte del tratamiento de la diabetes, es el tratamiento mismo."</p>
+                    <p style="color: #bdc3c7; font-size: 0.6em; text-align: right;">— Elliott P. Joslin</p>
+                </div>
+                <div style="margin-top: 40px; color: #bdc3c7; font-size: 0.6em;">
+                    <p>Dra. Roxana Torres Lazo</p>
+                    <p>Especialista de Primer Grado en Medicina Familiar</p>
+                    <p>2025</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            // Configuración optimizada para Laptop 15"
+            width: 1200,
+            height: 700,
+            margin: 0.04, // Menos margen para aprovechar pantalla
+            minScale: 0.2,
+            maxScale: 2.0,
+
+            hash: true,
+            transition: 'smooth',
+            slideNumber: true,
+            controls: true,
+            progress: true,
+            center: true
+        });
+    </script>
+</body>
+</html>
